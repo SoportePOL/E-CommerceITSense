@@ -40,30 +40,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ECommerce\Address.cs" />
-    <Compile Include="Models\ECommerce\BuyerReputation.cs" />
+    <Compile Include="Models\ECommerce\User\Address.cs" />
+    <Compile Include="Models\ECommerce\User\BuyerReputation.cs" />
     <Compile Include="Models\ECommerce\Products\Buying_modes.cs" />
     <Compile Include="Models\ECommerce\Products\Categories.cs" />
     <Compile Include="Models\ECommerce\Products\ChildrenCategory.cs" />
     <Compile Include="Models\ECommerce\Products\PathFromRoot.cs" />
     <Compile Include="Models\ECommerce\Products\Settings.cs" />
-    <Compile Include="Models\ECommerce\Buy.cs" />
-    <Compile Include="Models\ECommerce\Claims.cs" />
-    <Compile Include="Models\ECommerce\CompanyRep.cs" />
-    <Compile Include="Models\ECommerce\Credit.cs" />
-    <Compile Include="Models\ECommerce\DelayedHandlingTime.cs" />
-    <Compile Include="Models\ECommerce\List.cs" />
-    <Compile Include="Models\ECommerce\Metrics.cs" />
-    <Compile Include="Models\ECommerce\PersonalInformation.cs" />
-    <Compile Include="Models\ECommerce\Sales.cs" />
-    <Compile Include="Models\ECommerce\Sell.cs" />
-    <Compile Include="Models\ECommerce\User.cs" />
-    <Compile Include="Models\ECommerce\Identification.cs" />
-    <Compile Include="Models\ECommerce\Phone.cs" />
-    <Compile Include="Models\ECommerce\SellerReputation.cs" />
-    <Compile Include="Models\ECommerce\Status.cs" />
-    <Compile Include="Models\ECommerce\Transactions.cs" />
-    <Compile Include="Models\ECommerce\user_type.cs" />
+    <Compile Include="Models\ECommerce\User\Buy.cs" />
+    <Compile Include="Models\ECommerce\User\Claims.cs" />
+    <Compile Include="Models\ECommerce\User\CompanyRep.cs" />
+    <Compile Include="Models\ECommerce\User\Credit.cs" />
+    <Compile Include="Models\ECommerce\User\DelayedHandlingTime.cs" />
+    <Compile Include="Models\ECommerce\User\List.cs" />
+    <Compile Include="Models\ECommerce\User\Metrics.cs" />
+    <Compile Include="Models\ECommerce\User\PersonalInformation.cs" />
+    <Compile Include="Models\ECommerce\User\Sales.cs" />
+    <Compile Include="Models\ECommerce\User\Sell.cs" />
+    <Compile Include="Models\ECommerce\User\User.cs" />
+    <Compile Include="Models\ECommerce\User\Identification.cs" />
+    <Compile Include="Models\ECommerce\User\Phone.cs" />
+    <Compile Include="Models\ECommerce\User\SellerReputation.cs" />
+    <Compile Include="Models\ECommerce\User\Status.cs" />
+    <Compile Include="Models\ECommerce\User\Transactions.cs" />
+    <Compile Include="Models\ECommerce\User\User_type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
