@@ -42,6 +42,11 @@
   <ItemGroup>
     <Compile Include="Models\ECommerce\Address.cs" />
     <Compile Include="Models\ECommerce\BuyerReputation.cs" />
+    <Compile Include="Models\ECommerce\Products\Buying_modes.cs" />
+    <Compile Include="Models\ECommerce\Products\Categories.cs" />
+    <Compile Include="Models\ECommerce\Products\ChildrenCategory.cs" />
+    <Compile Include="Models\ECommerce\Products\PathFromRoot.cs" />
+    <Compile Include="Models\ECommerce\Products\Settings.cs" />
     <Compile Include="Models\ECommerce\User.cs" />
     <Compile Include="Models\ECommerce\Identification.cs" />
     <Compile Include="Models\ECommerce\Phone.cs" />
