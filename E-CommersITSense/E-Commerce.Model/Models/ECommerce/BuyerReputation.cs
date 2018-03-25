@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_Commerce.Model
+namespace E_Commerce.Model.Models.ECommerce
 {
-    public class Class1
+    public class BuyerReputation
     {
+        public List<object> tags { get; set; }
     }
 }

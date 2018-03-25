@@ -40,8 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Models\ECommerce\Address.cs" />
+    <Compile Include="Models\ECommerce\BuyerReputation.cs" />
+    <Compile Include="Models\ECommerce\User.cs" />
+    <Compile Include="Models\ECommerce\Identification.cs" />
+    <Compile Include="Models\ECommerce\Phone.cs" />
+    <Compile Include="Models\ECommerce\Ratings.cs" />
+    <Compile Include="Models\ECommerce\SellerExperience.cs" />
+    <Compile Include="Models\ECommerce\SellerReputation.cs" />
+    <Compile Include="Models\ECommerce\Status.cs" />
+    <Compile Include="Models\ECommerce\Transactions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="DAL\ApiML\" />
+    <Folder Include="DAL\Controller\" />
+    <Folder Include="Interface\" />
+    <Folder Include="Models\General\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
