@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace E_Commerce.Model.Models.ECommerce
 {
-    public class Transactions
+    public class Claims
     {
         public string period { get; set; }
-        public int total { get; set; }
-        public int completed { get; set; }
-        public int canceled { get; set; }
-        public String ratings { get; set; }
+        public string rate { get; set;  }
     }
 }

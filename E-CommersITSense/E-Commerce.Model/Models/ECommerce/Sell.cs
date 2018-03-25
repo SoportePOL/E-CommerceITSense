@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace E_Commerce.Model.Models.ECommerce
 {
-    public class SellerExperience
+    public class Sell
     {
-        public string newbiew { get; set; }
-        public string intermediate { get; set; }
-        public string advanced { get; set; }
+        public string allow { get; set; }
+        public string codes { get; set; }
     }
 }

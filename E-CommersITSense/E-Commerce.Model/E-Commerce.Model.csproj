@@ -41,15 +41,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ECommerce\Address.cs" />
-    <Compile Include="Models\ECommerce\BuyerReputation.cs" />
+    <Compile Include="Models\ECommerce\Buy.cs" />
+    <Compile Include="Models\ECommerce\Claims.cs" />
+    <Compile Include="Models\ECommerce\CompanyRep.cs" />
+    <Compile Include="Models\ECommerce\Credit.cs" />
+    <Compile Include="Models\ECommerce\DelayedHandlingTime.cs" />
+    <Compile Include="Models\ECommerce\List.cs" />
+    <Compile Include="Models\ECommerce\Metrics.cs" />
+    <Compile Include="Models\ECommerce\PersonalInformation.cs" />
+    <Compile Include="Models\ECommerce\Sales.cs" />
+    <Compile Include="Models\ECommerce\Sell.cs" />
     <Compile Include="Models\ECommerce\User.cs" />
     <Compile Include="Models\ECommerce\Identification.cs" />
     <Compile Include="Models\ECommerce\Phone.cs" />
-    <Compile Include="Models\ECommerce\Ratings.cs" />
-    <Compile Include="Models\ECommerce\SellerExperience.cs" />
     <Compile Include="Models\ECommerce\SellerReputation.cs" />
     <Compile Include="Models\ECommerce\Status.cs" />
     <Compile Include="Models\ECommerce\Transactions.cs" />
+    <Compile Include="Models\ECommerce\user_type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

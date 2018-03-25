@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace E_Commerce.Model.Models.ECommerce
 {
-    public class Ratings
+     public class CompanyRep
     {
-        public int positive { get; set; }
-        public int negative { get; set; }
-        public int neutral { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+
     }
 }
