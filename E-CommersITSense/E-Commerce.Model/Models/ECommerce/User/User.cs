@@ -25,9 +25,11 @@ namespace E_Commerce.Model.Models.ECommerce
         public string site_id { get; set; }
         public string permalink { get; set; }
         public string seller_experience { get; set; }
-        public string seller_reputation { get; set; }
-        public string buyer_reputation { get; set; }
-        public string status { get; set; }
+        public SellerReputation seller_reputation { get; set; }
+        public Status status { get; set; }
+        public Credit credit { get; set; }
+        public PersonalInformation personal_information { get; set; }
+
     }
 
 }

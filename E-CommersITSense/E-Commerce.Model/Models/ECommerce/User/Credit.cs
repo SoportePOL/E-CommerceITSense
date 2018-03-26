@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace E_Commerce.Model.Models.ECommerce
 {
-    public class Ratings
+     public class Credit
     {
-        public int positive { get; set; }
-        public int negative { get; set; }
-        public int neutral { get; set; }
+        public string consumed { get; set; }
+        public string credit_level_id { get; set; }
     }
 }

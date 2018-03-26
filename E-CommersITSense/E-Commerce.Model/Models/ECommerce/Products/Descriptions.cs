@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_Commerce.Model.Models.ECommerce
+namespace E_Commerce.Model.Models.ECommerce.Products
 {
-    public class Status
+    public class Descriptions
     {
-        public string site_status { get; set; }
+        public int id { get; set; }
     }
 }

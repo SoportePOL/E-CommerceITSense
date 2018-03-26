@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace E_Commerce.Model.Models.ECommerce
 {
-    public class BuyerReputation
+     public class CompanyRep
     {
-        public List<object> tags { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+
     }
 }

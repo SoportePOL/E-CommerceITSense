@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace E_Commerce.Model.Models.ECommerce
 {
-    public class Transactions
+    public class Sales
     {
         public string period { get; set; }
-        public int total { get; set; }
-        public int completed { get; set; }
-        public int canceled { get; set; }
-        public Ratings ratings { get; set; }
+        public string completed { get; set; }
+
     }
 }
