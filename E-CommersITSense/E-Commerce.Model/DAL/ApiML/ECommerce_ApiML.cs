@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using E_Commerce.Model.Models.ECommerce;
+using E_Commerce.Model.Models.ECommerce.Products;
 using HttpParamsUtility;
 using MercadoLibre.SDK;
 using MercadoLibre.SDK.Meta;
@@ -65,6 +66,20 @@ namespace E_Commerce.Model.DAL.ApiML
 
                 oResult = JsonConvert.DeserializeObject<User>(Response);
                 
+            }
+
+            return oResult;
+        }
+
+        public List<Category> GetCategories()
+        {
+            List<Category> oResult = null;
+            using (var client = new HttpClient())
+            {
+                var result = Task.Run(async () => await m.GetAsync("/sites/MCO/categories", null)).Result;
+
+                string Response = result.Content.ReadAsStringAsync().Result;
+                oResult = JsonConvert.DeserializeObject<List<Category>>(Response);
             }
 
             return oResult;

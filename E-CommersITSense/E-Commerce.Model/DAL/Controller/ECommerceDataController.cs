@@ -1,4 +1,5 @@
 ﻿using E_Commerce.Model.Models.ECommerce;
+using E_Commerce.Model.Models.ECommerce.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,11 @@ namespace E_Commerce.Model.DAL.Controller
 
         public User SearchUser(string id) {
             return DataFactory.SearchUser(id);
+        }
+
+        public List<Category> GetCategories()
+        {
+            return DataFactory.GetCategories();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_Commerce.Model.Models.ECommerce.CategoriesProducts
+namespace E_Commerce.Model.Models.ECommerce.Products
 {
     public class ChildrenCategory
     {
