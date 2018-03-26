@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_Commerce.Model.Models.ECommerce.CategoriesProducts
+namespace E_Commerce.Model.Models.ECommerce.Products
 {
-
-        public class Categories
-      {
+        public class Category
+        {
             public string atributte_types { get; set; }
             public string id { get; set; }
             public string name { get; set; }

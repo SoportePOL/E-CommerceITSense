@@ -93,7 +93,7 @@
     <Compile Include="Models\ECommerce\User\Address.cs" />
     <Compile Include="Models\ECommerce\User\BuyerReputation.cs" />
     <Compile Include="Models\ECommerce\Products\Buying_modes.cs" />
-    <Compile Include="Models\ECommerce\Products\Categories.cs" />
+    <Compile Include="Models\ECommerce\Products\Category.cs" />
     <Compile Include="Models\ECommerce\Products\ChildrenCategory.cs" />
     <Compile Include="Models\ECommerce\Products\PathFromRoot.cs" />
     <Compile Include="Models\ECommerce\Products\Settings.cs" />
