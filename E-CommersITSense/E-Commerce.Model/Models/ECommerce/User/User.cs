@@ -11,12 +11,7 @@ namespace E_Commerce.Model.Models.ECommerce
         public int id { get; set; }
         public string nickname { get; set; }
         public DateTime registration_date { get; set; }
-        public string first_name { get; set; }
-        public string Last_name { get; set; }
         public string country_id { get; set; }
-        public string email { get; set; }
-        public Identification identification { get; set; }
-        public Phone phone { get; set; }
         public Address address { get; set; }
         public string user_type { get; set; }
         public List<string> tags { get; set; }
@@ -24,11 +19,9 @@ namespace E_Commerce.Model.Models.ECommerce
         public int points { get; set; }
         public string site_id { get; set; }
         public string permalink { get; set; }
-        public string seller_experience { get; set; }
         public SellerReputation seller_reputation { get; set; }
-        public Status status { get; set; }
-        public Credit credit { get; set; }
-        public PersonalInformation personal_information { get; set; }
+        public BuyerReputation buyer_reputation { get; set; }
+        public object status { get; set; }
 
     }
 

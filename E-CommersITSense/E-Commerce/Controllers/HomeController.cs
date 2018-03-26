@@ -13,19 +13,19 @@ namespace E_Commerce.Controllers
         // GET: Home
         public ActionResult Index(string code)
         {
-            ECommerce asdf = new ECommerce();
+            ECommerce oECommerce = new ECommerce();
             if (!string.IsNullOrEmpty(code))
             {
                 //Get Access Token
-                asdf.GetToken(code);
+                oECommerce.GetToken(code);
 
                 //Get Data User
-                asdf.SearchUser("198663698");
-                //198663698     APP_USR-2828323412798944-032610-809f08edf726360d1c189fde7f2337c1-198663698
-                return View();
+                var dUser =  oECommerce.SearchUser("198663698");
+
+                return View(dUser);
             }
 
-            return Redirect(asdf.GetUrlAuthorization());
+            return Redirect(oECommerce.GetUrlAuthorization());
         }
     }
 }

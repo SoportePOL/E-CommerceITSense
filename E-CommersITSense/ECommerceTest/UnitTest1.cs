@@ -10,7 +10,7 @@ namespace ECommerceTest
         public void Test()
         {
             ECommerce asdf = new ECommerce();
-            string respuesta = asdf.SearchUser("12342343");
+//string respuesta = asdf.SearchUser("12342343");
         }
     }
 }

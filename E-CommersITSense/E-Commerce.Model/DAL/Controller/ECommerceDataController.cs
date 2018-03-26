@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Commerce.Model.Models.ECommerce;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,12 +37,12 @@ namespace E_Commerce.Model.DAL.Controller
         {
             return DataFactory.GetUrlAuthorization();
         }
-        public bool GetToken(string code)
+        public string GetToken(string code)
         {
             return DataFactory.GetToken(code);
         }
 
-        public string SearchUser(string id) {
+        public User SearchUser(string id) {
             return DataFactory.SearchUser(id);
         }
     }

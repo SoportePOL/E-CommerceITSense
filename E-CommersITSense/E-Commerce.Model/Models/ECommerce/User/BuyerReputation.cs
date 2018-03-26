@@ -8,6 +8,6 @@ namespace E_Commerce.Model.Models.ECommerce
 {
     public class BuyerReputation
     {
-        public Transactions transactions { get; set; }
+        public object transactions { get; set; }
     }
 }

@@ -43,6 +43,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -50,6 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ECommerce.cs" />
+    <Compile Include="DAL\ApiML\ECommerce_ApiML.cs" />
+    <Compile Include="DAL\Controller\ECommerceDataController.cs" />
+    <Compile Include="DAL\Controller\ECommerceDataFactory.cs" />
+    <Compile Include="Interface\IECommerce.cs" />
     <Compile Include="Models\ECommerce\Products\Accepts_mercadopago.cs" />
     <Compile Include="Models\ECommerce\Products\Attribute_combinations.cs" />
     <Compile Include="Models\ECommerce\Products\City.cs" />
