@@ -40,6 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ECommerce\Products\Accepts_mercadopago.cs" />
+    <Compile Include="Models\ECommerce\Products\Attribute_combinations.cs" />
+    <Compile Include="Models\ECommerce\Products\City.cs" />
+    <Compile Include="Models\ECommerce\Products\Country.cs" />
+    <Compile Include="Models\ECommerce\Products\Descriptions.cs" />
+    <Compile Include="Models\ECommerce\Products\Differential_pricing.cs" />
+    <Compile Include="Models\ECommerce\Products\Geolocation.cs" />
+    <Compile Include="Models\ECommerce\Products\Items.cs" />
+    <Compile Include="Models\ECommerce\Products\Location.cs" />
+    <Compile Include="Models\ECommerce\Products\Neighborhood.cs" />
+    <Compile Include="Models\ECommerce\Products\Non_mercado_pago_payment_methods.cs" />
+    <Compile Include="Models\ECommerce\Products\Pictures.cs" />
+    <Compile Include="Models\ECommerce\Products\Sale_terms.cs" />
+    <Compile Include="Models\ECommerce\Products\Seller_address.cs" />
+    <Compile Include="Models\ECommerce\Products\Seller_contact.cs" />
+    <Compile Include="Models\ECommerce\Products\Shipping.cs" />
+    <Compile Include="Models\ECommerce\Products\State.cs" />
+    <Compile Include="Models\ECommerce\Products\Variations.cs" />
     <Compile Include="Models\ECommerce\User\Address.cs" />
     <Compile Include="Models\ECommerce\User\BuyerReputation.cs" />
     <Compile Include="Models\ECommerce\Products\Buying_modes.cs" />
