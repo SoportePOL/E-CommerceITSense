@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Commerce.Model.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,17 @@ namespace E_Commerce.Controllers
         // GET: Item
         public ActionResult Search()
         {
-            return View(Session["DataSession"]);
+            return View();
+        }
+
+        public ActionResult Index(string id)
+        {
+            ECommerce oECommerce = new ECommerce();
+            if (!string.IsNullOrEmpty(id))
+            {
+                return View(oECommerce.GetItem(id));
+            }
+            return View();
         }
     }
 }

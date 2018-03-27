@@ -15,7 +15,8 @@ namespace E_Commerce.Model.Interface
         User GetUser(string id, string access_tocken);
         User GetUser(string id);
         List<Category> GetCategories(string country);
-
         Category GetCategory(string categoryId);
+        Item GetItem(string itemId);
+
     }
 }

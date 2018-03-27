@@ -49,9 +49,9 @@ namespace E_Commerce.Model.Controller
             return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetCategory(categoryId);
         }
 
-        public Items GetItems()
+        public Item GetItem(string itemId)
         {
-            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetItems();
+            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetItem(itemId);
         }
     }
 }

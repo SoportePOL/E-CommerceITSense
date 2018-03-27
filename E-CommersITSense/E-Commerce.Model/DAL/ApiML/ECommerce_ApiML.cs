@@ -140,15 +140,15 @@ namespace E_Commerce.Model.DAL.ApiML
             return oResult;
         }
 
-        public Items GetItems()
+        public Item GetItem(string itemId)
         {
-            Items oResult = null;
+            Item oResult = null;
             using (var client = new HttpClient())
             {
-                var result = Task.Run(async () => await m.GetAsync("items/MCO448896604", null)).Result;
+                var result = Task.Run(async () => await m.GetAsync("items/" + itemId, null)).Result;
 
                 string Response = result.Content.ReadAsStringAsync().Result;
-                oResult = JsonConvert.DeserializeObject<Items>(Response);
+                oResult = JsonConvert.DeserializeObject<Item>(Response);
 
             }
 

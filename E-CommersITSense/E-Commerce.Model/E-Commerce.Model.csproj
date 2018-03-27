@@ -65,7 +65,7 @@
     <Compile Include="Models\ECommerce\Products\Differential_pricing.cs" />
     <Compile Include="Models\ECommerce\Products\Free_methods.cs" />
     <Compile Include="Models\ECommerce\Products\Geolocation.cs" />
-    <Compile Include="Models\ECommerce\Products\Items.cs" />
+    <Compile Include="Models\ECommerce\Products\Item.cs" />
     <Compile Include="Models\ECommerce\Products\Location.cs" />
     <Compile Include="Models\ECommerce\Products\Neighborhood.cs" />
     <Compile Include="Models\ECommerce\Products\Non_mercado_pago_payment_methods.cs" />

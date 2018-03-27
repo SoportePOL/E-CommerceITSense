@@ -24,10 +24,10 @@ namespace E_CommerceTest
         }
 
         [TestMethod]
-        public void GetItems()
+        public void GetItem()
         {
             ECommerce it = new ECommerce();
-            var result = it.GetItems();
+            var result = it.GetItem("MCO448896604");
 
         }
     }

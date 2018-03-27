@@ -62,9 +62,9 @@ namespace E_Commerce.Model.DAL.Controller
             return DataFactory.GetCategory(categoryId);
         }
 
-        public Items GetItems()
+        public Item GetItem(string itemId)
         {
-            return DataFactory.GetItems();
+            return DataFactory.GetItem(itemId);
         }
     }
 }

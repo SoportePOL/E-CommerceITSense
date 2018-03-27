@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace E_Commerce.Model.Models.ECommerce.Products
 {
-    public class Items
+    public class Item
     {
         public string id { get; set; }
         public string site_id  { get; set; }
+        public string title { get; set; }
         public int seller_id { get; set; }
         public string category_id { get; set; }
         public int official_store_id { get; set; }
