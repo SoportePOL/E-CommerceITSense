@@ -39,19 +39,19 @@ namespace E_Commerce.Model.Controller
             return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetUser(id, access_token);
         }
 
-        public List<Category> GetCategories()
+        public List<Category> GetCategories(string country)
         {
-            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetCategories();
+            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetCategories(country);
         }
 
-        public Category GetProducts()
+        public Category GetCategory(string categoryId)
         {
-            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetProducts();
+            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetCategory(categoryId);
         }
 
-        public Items GetItems()
+        public Item GetItem(string itemId)
         {
-            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetItems();
+            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetItem(itemId);
         }
     }
 }

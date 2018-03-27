@@ -81,26 +81,56 @@ namespace E_Commerce.Model.DAL.ApiML
         }
 
 
-        public List<Category> GetCategories()
+        public List<Category> GetCategories(string country)
         {
             List<Category> oResult = null;
+            List<Category> oResult2 = null;
             using (var client = new HttpClient())
             {
-                var result = Task.Run(async () => await m.GetAsync("/sites/MCO/categories", null)).Result;
+                var result = Task.Run(async () => await m.GetAsync("/sites/" + country + "/categories", null)).Result;
 
                 string Response = result.Content.ReadAsStringAsync().Result;
                 oResult = JsonConvert.DeserializeObject<List<Category>>(Response);
             }
 
-            return oResult;
+            if (oResult != null)
+            {
+                try
+                {
+                    oResult2 = new List<Category>();
+                    oResult.All(x => {
+
+
+                        /*
+                          var rCategory = GetCategory(x.id);
+                          rCategory.children_categories.All(z => {
+                            z.info_category = GetCategory(z.id);
+                            return true;
+                        });*/
+
+                        oResult2.Add(GetCategory(x.id));
+
+                        return true;
+                    });
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                
+            }
+
+
+            return oResult2;
         }
 
-        public Category GetProducts()
+        public Category GetCategory(string categoryId)
         {
             Category oResult = null;
             using (var client = new HttpClient())
             {
-                var result = Task.Run(async () => await m.GetAsync("/categories/MCO1747", null)).Result;
+                var result = Task.Run(async () => await m.GetAsync("/categories/" + categoryId, null)).Result;
 
                 string Response = result.Content.ReadAsStringAsync().Result;
                 oResult = JsonConvert.DeserializeObject<Category>(Response);
@@ -110,15 +140,15 @@ namespace E_Commerce.Model.DAL.ApiML
             return oResult;
         }
 
-        public Items GetItems()
+        public Item GetItem(string itemId)
         {
-            Items oResult = null;
+            Item oResult = null;
             using (var client = new HttpClient())
             {
-                var result = Task.Run(async () => await m.GetAsync("items/MCO448896604", null)).Result;
+                var result = Task.Run(async () => await m.GetAsync("items/" + itemId, null)).Result;
 
                 string Response = result.Content.ReadAsStringAsync().Result;
-                oResult = JsonConvert.DeserializeObject<Items>(Response);
+                oResult = JsonConvert.DeserializeObject<Item>(Response);
 
             }
 

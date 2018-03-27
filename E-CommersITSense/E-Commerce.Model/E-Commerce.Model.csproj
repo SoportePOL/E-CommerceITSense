@@ -65,7 +65,7 @@
     <Compile Include="Models\ECommerce\Products\Differential_pricing.cs" />
     <Compile Include="Models\ECommerce\Products\Free_methods.cs" />
     <Compile Include="Models\ECommerce\Products\Geolocation.cs" />
-    <Compile Include="Models\ECommerce\Products\Items.cs" />
+    <Compile Include="Models\ECommerce\Products\Item.cs" />
     <Compile Include="Models\ECommerce\Products\Location.cs" />
     <Compile Include="Models\ECommerce\Products\Neighborhood.cs" />
     <Compile Include="Models\ECommerce\Products\Non_mercado_pago_payment_methods.cs" />
@@ -97,7 +97,6 @@
     <Compile Include="Models\ECommerce\User\BuyerReputation.cs" />
     <Compile Include="Models\ECommerce\Products\Buying_modes.cs" />
     <Compile Include="Models\ECommerce\Products\Category.cs" />
-    <Compile Include="Models\ECommerce\Products\ChildrenCategory.cs" />
     <Compile Include="Models\ECommerce\Products\PathFromRoot.cs" />
     <Compile Include="Models\ECommerce\Products\Settings.cs" />
     <Compile Include="Models\ECommerce\User\Buy.cs" />
@@ -117,11 +116,10 @@
     <Compile Include="Models\ECommerce\User\Status.cs" />
     <Compile Include="Models\ECommerce\User\Transactions.cs" />
     <Compile Include="Models\ECommerce\User\User_type.cs" />
+    <Compile Include="Models\General\Enumerations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\General\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

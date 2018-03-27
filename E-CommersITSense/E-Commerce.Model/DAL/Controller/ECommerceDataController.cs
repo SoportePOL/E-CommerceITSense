@@ -52,19 +52,19 @@ namespace E_Commerce.Model.DAL.Controller
             return DataFactory.GetUser(id, access_token);
         }
 
-        public List<Category> GetCategories()
+        public List<Category> GetCategories(string country)
         {
-            return DataFactory.GetCategories();
+            return DataFactory.GetCategories(country);
         }
 
-        public Category GetProducts()
+        public Category GetCategory(string categoryId)
         {
-            return DataFactory.GetProducts();
+            return DataFactory.GetCategory(categoryId);
         }
 
-        public Items GetItems()
+        public Item GetItem(string itemId)
         {
-            return DataFactory.GetItems();
+            return DataFactory.GetItem(itemId);
         }
     }
 }
