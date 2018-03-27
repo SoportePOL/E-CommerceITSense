@@ -1,5 +1,6 @@
 ﻿using E_Commerce.Model.Models.ECommerce;
 using E_Commerce.Model.Models.ECommerce.Products;
+using E_Commerce.Model.Models.General;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,8 @@ namespace E_Commerce.Model.Interface
         List<Category> GetCategories(string country);
         Category GetCategory(string categoryId);
         Item GetItem(string itemId);
-        List<Item> GetItems(string country, string CategoryId);
-
-        ItemResponse GetItemResponse();
+        ItemResponse GetItems(string country, string CategoryId, Enumerations.enumTypeSearch type);
+        
 
     }
 }

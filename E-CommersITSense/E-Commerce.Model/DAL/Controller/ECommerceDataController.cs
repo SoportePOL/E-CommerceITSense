@@ -1,5 +1,6 @@
 ﻿using E_Commerce.Model.Models.ECommerce;
 using E_Commerce.Model.Models.ECommerce.Products;
+using E_Commerce.Model.Models.General;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,15 +68,11 @@ namespace E_Commerce.Model.DAL.Controller
             return DataFactory.GetItem(itemId);
         }
 
-        public List<Item> GetItems(string country, string CategoryId)
+        public ItemResponse GetItems(string country, string CategoryId, Enumerations.enumTypeSearch type)
         {
-            return DataFactory.GetItems(country, CategoryId);
+            return DataFactory.GetItems(country, CategoryId, type);
         }
 
-        public ItemResponse GetItemResponse()
-        {
-            return DataFactory.GetItemResponse();
-        }
 
 
 

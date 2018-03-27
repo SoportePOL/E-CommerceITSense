@@ -10,6 +10,7 @@ using HttpParamsUtility;
 using MercadoLibre.SDK;
 using MercadoLibre.SDK.Meta;
 using Newtonsoft.Json;
+using E_Commerce.Model.Models.General;
 
 namespace E_Commerce.Model.DAL.ApiML
 {
@@ -42,7 +43,7 @@ namespace E_Commerce.Model.DAL.ApiML
                 return null;
             }
 
-
+            
         }
 
         public User GetUser(string id, string access_tocken)
@@ -58,7 +59,7 @@ namespace E_Commerce.Model.DAL.ApiML
                 string Response = result.Content.ReadAsStringAsync().Result;
 
                 oResult = JsonConvert.DeserializeObject<User>(Response);
-
+                
             }
 
             return oResult;
@@ -162,35 +163,31 @@ namespace E_Commerce.Model.DAL.ApiML
             return oResult;
         }
 
-        public List<Item> GetItems(string country, string CategoryId)
+        public ItemResponse GetItems(string country, string value, Enumerations.enumTypeSearch type)
         {
-            List<Item> oResult = null;
-            using (var client = new HttpClient())
+            string stringRequest = "";
+            if (type == Enumerations.enumTypeSearch.Category)
             {
-                var result = Task.Run(async () => await m.GetAsync("sites/" + country + "/search?category=" + CategoryId, null)).Result;
-
-                string Response = result.Content.ReadAsStringAsync().Result;
-                var a  = JsonConvert.DeserializeObject<List<Item>>(Response);
-                
+                stringRequest = "/sites/"+ country +"/search?category=" + value;
+            } else if (type == Enumerations.enumTypeSearch.Item)
+            {
+                stringRequest = "/sites/"+country+"/search?q=" + value;
             }
 
-            return oResult;
-        }
-
-        public ItemResponse GetItemResponse()
-        {
             ItemResponse oResult = null;
             using (var client = new HttpClient())
             {
-                var result = Task.Run(async () => await m.GetAsync("/sites/MCO/search?category=MCO1747" , null)).Result;
+                var result = Task.Run(async () => await m.GetAsync(stringRequest, null)).Result;
 
                 string Response = result.Content.ReadAsStringAsync().Result;
-                oResult = JsonConvert.DeserializeObject<ItemResponse> (Response);
+                oResult = JsonConvert.DeserializeObject<ItemResponse>(Response);
 
             }
 
             return oResult;
         }
+
+       
 
 
 

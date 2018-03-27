@@ -9,6 +9,7 @@ namespace E_Commerce.Model.Models.ECommerce.Products
     public class ItemResponse
     {
         public string site_id { get; set; }
+        public string query { get; set; }
         //public Paging paging { get; set; }
         public List<Item> results { get; set; }
         //public List<string> secondary_results { get; set; }

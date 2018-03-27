@@ -35,16 +35,11 @@ namespace E_CommerceTest
         public void GetItems()
         {
             ECommerce it = new ECommerce();
-            var result = it.GetItems(Enumerations.enumCountries.MCO.ToString(), "MCO1747");
+            var result = it.GetItems(Enumerations.enumCountries.MCO.ToString(), "MCO1747", Enumerations.enumTypeSearch.Category);
 
+
+            var result2 = it.GetItems(Enumerations.enumCountries.MCO.ToString(), "Celulares", Enumerations.enumTypeSearch.Item);
         }
 
-        [TestMethod]
-        public void GetItemResponse()
-        {
-            ECommerce ep = new ECommerce();
-            var result = ep.GetItemResponse();
-
-        }
     }
 }
