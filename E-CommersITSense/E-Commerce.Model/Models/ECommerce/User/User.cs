@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MercadoLibre.SDK;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace E_Commerce.Model.Models.ECommerce
 {
     public class User
     {
+        public MeliCredentials data_credential { get; set; }
         public int id { get; set; }
         public string nickname { get; set; }
         public DateTime registration_date { get; set; }

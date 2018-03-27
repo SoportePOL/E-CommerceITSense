@@ -11,21 +11,16 @@ namespace E_Commerce.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index(string code)
+        public ActionResult Index()
         {
             ECommerce oECommerce = new ECommerce();
-            if (!string.IsNullOrEmpty(code))
+            if (Session["DataSession"] != null)
             {
-                //Get Access Token
-                oECommerce.GetToken(code);
-
-                //Get Data User
-                var dUser =  oECommerce.SearchUser("198663698");
-
-                return View(dUser);
+                return View(Session["DataSession"]);
             }
-
             return Redirect(oECommerce.GetUrlAuthorization());
         }
+
+
     }
 }

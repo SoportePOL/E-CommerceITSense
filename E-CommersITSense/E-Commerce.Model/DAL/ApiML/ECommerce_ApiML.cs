@@ -28,37 +28,30 @@ namespace E_Commerce.Model.DAL.ApiML
 
         public string GetUrlAuthorization()
         {
-            return this.m.GetAuthUrl(3445471109297649, MeliSite.Colombia, "http://localhost:9680/Home/Index");
-        }
-
-        public void RefreshToken(string code)
-        {
-            
-
-           // m.Credentials.TokensChanged += (sender, args) => { doSomethingWithNewTokenValues(args.Info); };
-
-            var success = this.m.AuthorizeAsync(code, "");
+            return this.m.GetAuthUrl(3445471109297649, MeliSite.Colombia, "http://localhost:9680/Auth/Index");
         }
 
         public string GetToken(string code)
         {
             using (var client = new HttpClient())
             {
-                var result = Task.Run(async () => await m.AuthorizeAsync(code, "http://localhost:9680/Home/Index")).Result;
-                var Response = "";//result.Content.ReadAsStringAsync().Result;
-                return Response;
+                if (Task.Run(async () => await m.AuthorizeAsync(code, "http://localhost:9680/Auth/Index")).Result)
+                {
+                    return m.Credentials.AccessToken;
+                }
+                return null;
             }
 
             
         }
 
-        public User SearchUser(string id)
+        public User GetUser(string id, string access_tocken)
         {
             User oResult = null;
             using (var client = new HttpClient())
             {
                 var p = new HttpParams()
-                     .Add("access_token", "APP_USR-3445471109297649-032612-1b975a880319aafb667dc2fe1b177217-143566619");
+                     .Add("access_token", access_tocken);
 
                 var result = Task.Run(async () => await m.GetAsync("/users/"+ id, p)).Result;
 
@@ -70,6 +63,23 @@ namespace E_Commerce.Model.DAL.ApiML
 
             return oResult;
         }
+
+        public User GetUser(string id)
+        {
+            User oResult = null;
+            using (var client = new HttpClient())
+            {
+                var result = Task.Run(async () => await m.GetAsync("/users/" + id, null)).Result;
+
+                string Response = result.Content.ReadAsStringAsync().Result;
+
+                oResult = JsonConvert.DeserializeObject<User>(Response);
+
+            }
+
+            return oResult;
+        }
+
 
         public List<Category> GetCategories()
         {

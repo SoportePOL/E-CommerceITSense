@@ -16,14 +16,7 @@ namespace E_Commerce.ApiControllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/<controller>/5
-        public string GetToken(string code)
-        {
-            ECommerce asdf = new ECommerce();
-            var asdfadsf = asdf.GetToken(code);
-
-            return "";
-        }
+      
         
     }
 }
