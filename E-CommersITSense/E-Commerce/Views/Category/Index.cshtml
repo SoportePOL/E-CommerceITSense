@@ -1,0 +1,29 @@
+﻿@model E_Commerce.Model.Models.ECommerce.Products.Category
+
+@{
+    ViewBag.Title = "Categorias";
+}
+
+<h1> Categorias (@Model.children_categories.Count()) </h1>
+<h4>
+    @if (Model.path_from_root != null)
+    {
+        @Html.ActionLink("Todas las Categorias", "Index", new { id = "" }, null)
+        foreach (var item in Model.path_from_root)
+        {
+            @Html.ActionLink("/" + item.name, "Index", new { id = item.id }, null)
+        }
+    }
+</h4>
+
+<div class="list-group">
+    @foreach (var item in Model.children_categories)
+    {
+        
+        <a href="@Url.Action("Index","Category",new { id = item.id })" class="list-group-item list-group-item-action">
+            @item.name (@item.total_items_in_this_category)
+        </a>
+    }
+</div>
+
+

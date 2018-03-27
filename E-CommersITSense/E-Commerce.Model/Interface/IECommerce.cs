@@ -14,8 +14,8 @@ namespace E_Commerce.Model.Interface
         string GetToken(string code);
         User GetUser(string id, string access_tocken);
         User GetUser(string id);
-        List<Category> GetCategories();
+        List<Category> GetCategories(string country);
 
-        Category GetProducts();
+        Category GetCategory(string categoryId);
     }
 }
