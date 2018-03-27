@@ -16,5 +16,6 @@ namespace E_Commerce.Model.Interface
         List<Category> GetCategories();
 
         Category GetProducts();
+        Items GetItems();
     }
 }

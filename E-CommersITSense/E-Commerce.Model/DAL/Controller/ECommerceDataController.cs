@@ -56,5 +56,10 @@ namespace E_Commerce.Model.DAL.Controller
         {
             return DataFactory.GetProducts();
         }
+
+        public Items GetItems()
+        {
+            return DataFactory.GetItems();
+        }
     }
 }

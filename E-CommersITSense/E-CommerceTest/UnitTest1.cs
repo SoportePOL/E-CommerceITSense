@@ -24,5 +24,13 @@ namespace E_CommerceTest
             var result = ep.GetProducts();
 
         }
+
+        [TestMethod]
+        public void GetItems()
+        {
+            ECommerce it = new ECommerce();
+            var result = it.GetItems();
+
+        }
     }
 }
