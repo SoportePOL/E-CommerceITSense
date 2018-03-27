@@ -44,6 +44,7 @@ namespace E_Commerce.Model.Controller
             return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetCategories(country);
         }
 
+     
         public Category GetCategory(string categoryId)
         {
             return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetCategory(categoryId);
@@ -52,6 +53,16 @@ namespace E_Commerce.Model.Controller
         public Item GetItem(string itemId)
         {
             return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetItem(itemId);
+        }
+
+        public List<Item> GetItems(string country, string CategoryId)
+        {
+            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetItems(country, CategoryId);
+        }
+
+        public ItemResponse GetItemResponse()
+        {
+            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetItemResponse();
         }
     }
 }

@@ -66,5 +66,18 @@ namespace E_Commerce.Model.DAL.Controller
         {
             return DataFactory.GetItem(itemId);
         }
+
+        public List<Item> GetItems(string country, string CategoryId)
+        {
+            return DataFactory.GetItems(country, CategoryId);
+        }
+
+        public ItemResponse GetItemResponse()
+        {
+            return DataFactory.GetItemResponse();
+        }
+
+
+
     }
 }

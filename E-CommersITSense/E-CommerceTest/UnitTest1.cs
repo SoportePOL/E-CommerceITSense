@@ -30,5 +30,21 @@ namespace E_CommerceTest
             var result = it.GetItem("MCO448896604");
 
         }
+
+        [TestMethod]
+        public void GetItems()
+        {
+            ECommerce it = new ECommerce();
+            var result = it.GetItems(Enumerations.enumCountries.MCO.ToString(), "MCO1747");
+
+        }
+
+        [TestMethod]
+        public void GetItemResponse()
+        {
+            ECommerce ep = new ECommerce();
+            var result = ep.GetItemResponse();
+
+        }
     }
 }

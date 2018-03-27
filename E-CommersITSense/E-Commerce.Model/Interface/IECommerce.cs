@@ -17,6 +17,9 @@ namespace E_Commerce.Model.Interface
         List<Category> GetCategories(string country);
         Category GetCategory(string categoryId);
         Item GetItem(string itemId);
+        List<Item> GetItems(string country, string CategoryId);
+
+        ItemResponse GetItemResponse();
 
     }
 }

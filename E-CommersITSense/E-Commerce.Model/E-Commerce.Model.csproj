@@ -59,6 +59,7 @@
     <Compile Include="Models\ECommerce\Products\Accepts_mercadopago.cs" />
     <Compile Include="Models\ECommerce\Products\Attributes.cs" />
     <Compile Include="Models\ECommerce\Products\Attribute_combinations.cs" />
+    <Compile Include="Models\ECommerce\Products\Available_sorts.cs" />
     <Compile Include="Models\ECommerce\Products\City.cs" />
     <Compile Include="Models\ECommerce\Products\Country.cs" />
     <Compile Include="Models\ECommerce\Products\DescriptionItem.cs" />
@@ -67,15 +68,18 @@
     <Compile Include="Models\ECommerce\Products\Free_methods.cs" />
     <Compile Include="Models\ECommerce\Products\Geolocation.cs" />
     <Compile Include="Models\ECommerce\Products\Item.cs" />
+    <Compile Include="Models\ECommerce\Products\ItemResponse.cs" />
     <Compile Include="Models\ECommerce\Products\Location.cs" />
     <Compile Include="Models\ECommerce\Products\Neighborhood.cs" />
     <Compile Include="Models\ECommerce\Products\Non_mercado_pago_payment_methods.cs" />
+    <Compile Include="Models\ECommerce\Products\Paging.cs" />
     <Compile Include="Models\ECommerce\Products\Pictures.cs" />
     <Compile Include="Models\ECommerce\Products\Rule.cs" />
     <Compile Include="Models\ECommerce\Products\Sale_terms.cs" />
     <Compile Include="Models\ECommerce\Products\Seller_address.cs" />
     <Compile Include="Models\ECommerce\Products\Seller_contact.cs" />
     <Compile Include="Models\ECommerce\Products\Shipping.cs" />
+    <Compile Include="Models\ECommerce\Products\Sort.cs" />
     <Compile Include="Models\ECommerce\Products\State.cs" />
     <Compile Include="Models\ECommerce\Products\Variations.cs" />
     <Compile Include="Models\ECommerce\Shipments\Attributes.cs" />

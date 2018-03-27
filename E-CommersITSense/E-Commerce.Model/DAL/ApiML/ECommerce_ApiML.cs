@@ -161,6 +161,39 @@ namespace E_Commerce.Model.DAL.ApiML
             }
             return oResult;
         }
+
+        public List<Item> GetItems(string country, string CategoryId)
+        {
+            List<Item> oResult = null;
+            using (var client = new HttpClient())
+            {
+                var result = Task.Run(async () => await m.GetAsync("sites/" + country + "/search?category=" + CategoryId, null)).Result;
+
+                string Response = result.Content.ReadAsStringAsync().Result;
+                var a  = JsonConvert.DeserializeObject<List<Item>>(Response);
+                
+            }
+
+            return oResult;
+        }
+
+        public ItemResponse GetItemResponse()
+        {
+            ItemResponse oResult = null;
+            using (var client = new HttpClient())
+            {
+                var result = Task.Run(async () => await m.GetAsync("/sites/MCO/search?category=MCO1747" , null)).Result;
+
+                string Response = result.Content.ReadAsStringAsync().Result;
+                oResult = JsonConvert.DeserializeObject<ItemResponse> (Response);
+
+            }
+
+            return oResult;
+        }
+
+
+
     }
 
 }
