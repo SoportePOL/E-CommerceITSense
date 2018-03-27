@@ -19,10 +19,17 @@
 <div class="list-group">
     @foreach (var item in Model.children_categories)
     {
-        
-        <a href="@Url.Action("Index","Category",new { id = item.id })" class="list-group-item list-group-item-action">
-            @item.name (@item.total_items_in_this_category)
-        </a>
+        <div class="list-group-item ">
+            <a href="@Url.Action("Index", "Category", new { id = item.id })" style="text-decoration:none; color: black;">
+                @item.name (@item.total_items_in_this_category)
+            </a>
+
+
+            <a href="@Url.Action("Search", "Item", new { id = item.id, type = "2" })" target="_blank"><i class="fa fa-external-link"></i></a>
+
+        </div>
+
+
     }
 </div>
 

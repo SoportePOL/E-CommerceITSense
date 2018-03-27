@@ -16,7 +16,14 @@ namespace E_Commerce.Controllers
             ECommerce oECommerce = new ECommerce();
             if (!string.IsNullOrEmpty(id))
             {
-                return View(oECommerce.GetCategory(id));
+                var oQuery = oECommerce.GetCategory(id);
+
+                if (oQuery.children_categories.Count == 0)
+                {
+                    return RedirectToAction("Search","Item",new { id =  id, type = "2" });
+                }
+
+                return View(oQuery);
             }
             Model.Models.ECommerce.Products.Category oResult = new Model.Models.ECommerce.Products.Category();
             oResult.children_categories = oECommerce.GetCategories(Model.Models.General.Enumerations.enumCountries.MCO.ToString());

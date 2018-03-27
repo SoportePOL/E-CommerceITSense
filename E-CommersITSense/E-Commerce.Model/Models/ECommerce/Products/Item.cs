@@ -14,7 +14,7 @@ namespace E_Commerce.Model.Models.ECommerce.Products
         public int seller_id { get; set; }
         public string category_id { get; set; }
         public int? official_store_id { get; set; }
-        public int price { get; set; }
+        public long price { get; set; }
         public int base_price { get; set; }
         public int? original_price { get; set; }
         public string currency_id { get; set; }
@@ -39,14 +39,14 @@ namespace E_Commerce.Model.Models.ECommerce.Products
        // public Shipping shipping { get; set; } 
         public string international_delivery_mode { get; set; }
         public Seller_address seller_address { get; set; }
-        public string seller_contact { get; set; }
+        //public string seller_contact { get; set; }
         public Location location { get; set; }
         public Geolocation geolocation { get; set; }
         public List<string> coverage_areas { get; set; } 
         public List<Attributes> attributes { get; set; }
         public List<string> warnings { get; set; } 
         public string listing_source { get; set; }
-        public List<string> variations { get; set; } 
+        //public List<string> variations { get; set; } 
         public string status { get; set; }
         public List<string> sub_status { get; set; }
         public List<string> tags { get; set; } 

@@ -4,34 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - ECommerce</title>
-    
+
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="@Url.Action("Index", "Home")">EComerce</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#a3bffb!important;">
+        <strong><a class="navbar-brand" href="@Url.Action("Index", "Home")">E-Commerce</a></strong>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav ml-auto">
 
                 
                 <li class="nav-item active">
                     <a class="nav-link" href="@Url.Action("Index", "Category")">Categorias</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         @{ E_Commerce.Model.Models.ECommerce.User oUser = Session["DataSession"] != null ? (E_Commerce.Model.Models.ECommerce.User)Session["DataSession"] : new E_Commerce.Model.Models.ECommerce.User();}
 
                         @oUser.nickname 
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="@Url.Action("Index","Profile")">Ver Perfil</a>
-                    </div>
+                    <!--<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="Url.Action("Index","Profile")">Ver Perfil</a>
+                    </div>-->
                 </li>
 
             </ul>
@@ -39,11 +40,16 @@
         </div>
 
     </nav>
-
+    
    
-    <div class="p-3 mb-2 bg-light text-dark">
+    <div class="p-3 mb-2 bg-light text-dark" style="background-color: #a3bffb!important;">
         <div class="container">
-            <input class="form-control" type="text" name="name" value="" placeholder="Buscar Item" />
+            @using (Html.BeginForm("Search", "Item", FormMethod.Get, null))
+            {
+                <input class="form-control" type="text" name="id" value="" placeholder="Buscar Item" />
+                <input type="hidden" name="type" value="1" />
+            }
+            
         </div>
     </div>
 

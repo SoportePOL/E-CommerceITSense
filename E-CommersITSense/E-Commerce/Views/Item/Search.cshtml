@@ -1,8 +1,50 @@
-﻿
+﻿@model E_Commerce.Model.Models.ECommerce.Products.ItemResponse
+
 @{
     ViewBag.Title = "Search";
+
+    System.Globalization.CultureInfo cCultureInfo = new System.Globalization.CultureInfo("es-CO");
 }
 
+<h2>Busqueda por: @Model.query</h2>
 
+@if (Model.results.Count > 0 )
+{
+    <ul class="list-group">
 
+        @foreach (var item in Model.results)
+        {
+
+            <li class="list-group-item disabled">
+
+                <div class="row">
+                    <div class="list-inline border-right">
+                        <img class="img-responsive" src="@item.thumbnail" alt="Alternate Text" />
+                    </div>
+
+                    <div style="padding-left:20px;">
+                        <h4>
+                            <a href="@Url.Action("Index", new { id = item.id })" style="text-decoration-color: none; color:black;">
+                                <span> @item.title </span>
+                            </a>
+                        </h4>
+                        <del>@item.original_price.ToString()  </del>
+                        <div>
+                            <span>
+                                <strong> @item.price.ToString("c", cCultureInfo) </strong>
+                            </span>
+                        </div>
+                        <div>
+                            @item.sold_quantity vendidos
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+        }
+    </ul>
+}else
+{
+    <h1>NO SE ENCONTRARON RESULTADOS</h1>
+}
 
