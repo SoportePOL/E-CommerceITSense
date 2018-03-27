@@ -61,6 +61,7 @@
     <Compile Include="Models\ECommerce\Products\Attribute_combinations.cs" />
     <Compile Include="Models\ECommerce\Products\City.cs" />
     <Compile Include="Models\ECommerce\Products\Country.cs" />
+    <Compile Include="Models\ECommerce\Products\DescriptionItem.cs" />
     <Compile Include="Models\ECommerce\Products\Descriptions.cs" />
     <Compile Include="Models\ECommerce\Products\Differential_pricing.cs" />
     <Compile Include="Models\ECommerce\Products\Free_methods.cs" />

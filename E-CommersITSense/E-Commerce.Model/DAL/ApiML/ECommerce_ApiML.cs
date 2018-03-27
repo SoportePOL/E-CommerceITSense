@@ -42,7 +42,7 @@ namespace E_Commerce.Model.DAL.ApiML
                 return null;
             }
 
-            
+
         }
 
         public User GetUser(string id, string access_tocken)
@@ -53,12 +53,12 @@ namespace E_Commerce.Model.DAL.ApiML
                 var p = new HttpParams()
                      .Add("access_token", access_tocken);
 
-                var result = Task.Run(async () => await m.GetAsync("/users/"+ id, p)).Result;
+                var result = Task.Run(async () => await m.GetAsync("/users/" + id, p)).Result;
 
                 string Response = result.Content.ReadAsStringAsync().Result;
 
                 oResult = JsonConvert.DeserializeObject<User>(Response);
-                
+
             }
 
             return oResult;
@@ -98,18 +98,9 @@ namespace E_Commerce.Model.DAL.ApiML
                 try
                 {
                     oResult2 = new List<Category>();
-                    oResult.All(x => {
-
-
-                        /*
-                          var rCategory = GetCategory(x.id);
-                          rCategory.children_categories.All(z => {
-                            z.info_category = GetCategory(z.id);
-                            return true;
-                        });*/
-
+                    oResult.All(x =>
+                    {
                         oResult2.Add(GetCategory(x.id));
-
                         return true;
                     });
                 }
@@ -118,7 +109,7 @@ namespace E_Commerce.Model.DAL.ApiML
 
                     throw;
                 }
-                
+
             }
 
 
@@ -134,9 +125,9 @@ namespace E_Commerce.Model.DAL.ApiML
 
                 string Response = result.Content.ReadAsStringAsync().Result;
                 oResult = JsonConvert.DeserializeObject<Category>(Response);
-                
+
             }
-            
+
             return oResult;
         }
 
@@ -149,12 +140,27 @@ namespace E_Commerce.Model.DAL.ApiML
 
                 string Response = result.Content.ReadAsStringAsync().Result;
                 oResult = JsonConvert.DeserializeObject<Item>(Response);
-
+                if (oResult != null)
+                {
+                    oResult.description = GetDescriptionItem(itemId);
+                }
             }
 
             return oResult;
         }
-        ///items/MCO448896604
+
+        private DescriptionItem GetDescriptionItem(string itemId)
+        {
+            DescriptionItem oResult = null;
+            using (var client = new HttpClient())
+            {
+                var result = Task.Run(async () => await m.GetAsync("items/" + itemId + "/description", null)).Result;
+
+                string Response = result.Content.ReadAsStringAsync().Result;
+                oResult = JsonConvert.DeserializeObject<DescriptionItem>(Response);
+            }
+            return oResult;
+        }
     }
 
 }
