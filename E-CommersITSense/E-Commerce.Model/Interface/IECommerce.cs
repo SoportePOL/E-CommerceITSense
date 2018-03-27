@@ -12,7 +12,8 @@ namespace E_Commerce.Model.Interface
     {
         string GetUrlAuthorization();
         string GetToken(string code);
-        User SearchUser(string id);
+        User GetUser(string id, string access_tocken);
+        User GetUser(string id);
         List<Category> GetCategories();
 
         Category GetProducts();

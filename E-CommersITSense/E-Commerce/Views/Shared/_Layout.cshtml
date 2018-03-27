@@ -24,7 +24,7 @@
                         @Model.nickname
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Ver Perfil</a>
+                        <a class="dropdown-item" href="@Url.Action("Index","Profile")">Ver Perfil</a>
                     </div>
                 </li>
                 
@@ -34,10 +34,7 @@
     </nav>
 
 
-    <div class="container body-content">
-        <form class="">
-            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-        </form>
+    <div class="container body-content">       
 
         @RenderBody()
         <hr />

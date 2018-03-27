@@ -43,8 +43,13 @@ namespace E_Commerce.Model.DAL.Controller
             return DataFactory.GetToken(code);
         }
 
-        public User SearchUser(string id) {
-            return DataFactory.SearchUser(id);
+        public User GetUser(string id) {
+            return DataFactory.GetUser(id);
+        }
+
+        public User GetUser(string id, string access_token)
+        {
+            return DataFactory.GetUser(id, access_token);
         }
 
         public List<Category> GetCategories()

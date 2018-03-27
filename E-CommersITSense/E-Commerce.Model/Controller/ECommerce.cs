@@ -10,6 +10,15 @@ namespace E_Commerce.Model.Controller
 {
     public class ECommerce
     {
+
+        public ECommerce(){}
+
+        public ECommerce(string code)
+        {
+            
+        }
+
+
         public string GetUrlAuthorization()
         {
             return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetUrlAuthorization();
@@ -20,9 +29,14 @@ namespace E_Commerce.Model.Controller
             return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetToken(code);
         }
 
-        public User SearchUser(string id)
+        public User GetUser(string id)
         {
-            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.SearchUser(id);
+            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetUser(id);
+        }
+
+        public User GetUser(string id, string access_token)
+        {
+            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetUser(id, access_token);
         }
 
         public List<Category> GetCategories()
