@@ -18,5 +18,7 @@ namespace E_Commerce.Model.Interface
 
         Category GetProducts();
         Items GetItems();
+
+
     }
 }

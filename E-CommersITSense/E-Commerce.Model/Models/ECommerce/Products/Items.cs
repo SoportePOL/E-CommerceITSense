@@ -31,7 +31,7 @@ namespace E_Commerce.Model.Models.ECommerce.Products
         public string secure_thumbnail { get; set; }
         public List<Pictures> pictures { get; set; }
         public string video_id { get; set; }
-        public object descriptions { get; set; } // change
+        public object descriptions { get; set; } 
         public bool accepts_mercadopago { get; set; }
        public List<string> non_mercado_pago_payment_methods { get; set; }
        // public Shipping shipping { get; set; } 
