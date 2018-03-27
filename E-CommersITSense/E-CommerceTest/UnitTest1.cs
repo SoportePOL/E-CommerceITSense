@@ -22,5 +22,13 @@ namespace E_CommerceTest
             var result = ep.GetCategory("MCO6934");//Accesorios para carro
 
         }
+
+        [TestMethod]
+        public void GetItems()
+        {
+            ECommerce it = new ECommerce();
+            var result = it.GetItems();
+
+        }
     }
 }

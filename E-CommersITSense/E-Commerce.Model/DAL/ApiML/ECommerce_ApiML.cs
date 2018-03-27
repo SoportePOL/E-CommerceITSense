@@ -140,6 +140,21 @@ namespace E_Commerce.Model.DAL.ApiML
             return oResult;
         }
 
+        public Items GetItems()
+        {
+            Items oResult = null;
+            using (var client = new HttpClient())
+            {
+                var result = Task.Run(async () => await m.GetAsync("items/MCO448896604", null)).Result;
+
+                string Response = result.Content.ReadAsStringAsync().Result;
+                oResult = JsonConvert.DeserializeObject<Items>(Response);
+
+            }
+
+            return oResult;
+        }
+        ///items/MCO448896604
     }
 
 }
