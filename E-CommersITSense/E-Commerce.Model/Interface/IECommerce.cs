@@ -15,5 +15,6 @@ namespace E_Commerce.Model.Interface
         User SearchUser(string id);
         List<Category> GetCategories();
 
+        Category GetProducts();
     }
 }

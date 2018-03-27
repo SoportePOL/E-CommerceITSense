@@ -84,5 +84,23 @@ namespace E_Commerce.Model.DAL.ApiML
 
             return oResult;
         }
+
+        public Category GetProducts()
+        {
+            Category oResult = null;
+            using (var client = new HttpClient())
+            {
+                var result = Task.Run(async () => await m.GetAsync("/categories/MCO1747", null)).Result;
+
+                string Response = result.Content.ReadAsStringAsync().Result;
+                oResult = JsonConvert.DeserializeObject<Category>(Response);
+                
+            }
+            
+            return oResult;
+        }
+
     }
+
 }
+

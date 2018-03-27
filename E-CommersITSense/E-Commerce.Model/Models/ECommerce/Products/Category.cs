@@ -20,6 +20,6 @@ namespace E_Commerce.Model.Models.ECommerce.Products
             public Settings settings { get; set; }
             public string meta_categ_id { get; set; }
             public bool attributable { get; set; }
-        }
+    }
     }
 
