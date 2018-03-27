@@ -43,5 +43,10 @@ namespace E_Commerce.Model.Controller
         {
             return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetCategories();
         }
+
+        public Category GetProducts()
+        {
+            return E_Commerce.Model.DAL.Controller.ECommerceDataController.Instance.GetProducts();
+        }
     }
 }
