@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace E_Commerce.Model.Models.General
 {
-    public static class Enumerations
+    public class Enumerations
     {
         public enum enumCountries
         {
             MCO,
             MAL            
+        }
+
+        public enum enumTypeSearch
+        {
+            Category,
+            Item
         }
 
     }
