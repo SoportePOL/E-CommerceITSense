@@ -13,10 +13,10 @@ namespace E_Commerce.Model.Models.ECommerce.Products
         public string title { get; set; }
         public int seller_id { get; set; }
         public string category_id { get; set; }
-        public int official_store_id { get; set; }
+        public int? official_store_id { get; set; }
         public int price { get; set; }
         public int base_price { get; set; }
-        public int original_price { get; set; }
+        public int? original_price { get; set; }
         public string currency_id { get; set; }
         public int initial_quantity { get; set; }
         public int available_quantity { get; set; }
@@ -53,7 +53,7 @@ namespace E_Commerce.Model.Models.ECommerce.Products
         public string catalog_product_id { get; set; }
         public string domain_id { get; set; }
         public string parent_item_id { get; set; }
-        public string differential_pricing { get; set; }
+        //public string differential_pricing { get; set; }
         public List<string> deal_ids { get; set; } 
         public bool automatic_relist { get; set; }
         public string date_created { get; set; }
